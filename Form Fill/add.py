@@ -1,0 +1,127 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 27 20:28:48 2018
+
+@author: G Sriram
+"""
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(714, 740)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setMinimumSize(QtCore.QSize(100, 50))
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.label.setFont(font)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
+        self.formLayout = QtWidgets.QFormLayout()
+        self.formLayout.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
+        self.formLayout.setObjectName("formLayout")
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.le_name = QtWidgets.QLineEdit(Form)
+        self.le_name.setObjectName("le_name")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.le_name)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(2, QtWidgets.QFormLayout.FieldRole, spacerItem)
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.le_reg = QtWidgets.QLineEdit(Form)
+        self.le_reg.setObjectName("le_reg")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.le_reg)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(5, QtWidgets.QFormLayout.FieldRole, spacerItem1)
+        self.label_4 = QtWidgets.QLabel(Form)
+        self.label_4.setObjectName("label_4")
+        self.formLayout.setWidget(7, QtWidgets.QFormLayout.LabelRole, self.label_4)
+        self.le_pno = QtWidgets.QLineEdit(Form)
+        self.le_pno.setObjectName("le_pno")
+        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.le_pno)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(8, QtWidgets.QFormLayout.FieldRole, spacerItem2)
+        self.label_5 = QtWidgets.QLabel(Form)
+        self.label_5.setObjectName("label_5")
+        self.formLayout.setWidget(9, QtWidgets.QFormLayout.LabelRole, self.label_5)
+        self.le_mail = QtWidgets.QLineEdit(Form)
+        self.le_mail.setObjectName("le_mail")
+        self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.le_mail)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(10, QtWidgets.QFormLayout.FieldRole, spacerItem3)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(14, QtWidgets.QFormLayout.FieldRole, spacerItem4)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(11, QtWidgets.QFormLayout.LabelRole, spacerItem5)
+        self.pushButton = QtWidgets.QPushButton(Form)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("add")
+        self.formLayout.setWidget(13, QtWidgets.QFormLayout.FieldRole, self.pushButton)
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setObjectName("clear")
+        self.formLayout.setWidget(15, QtWidgets.QFormLayout.FieldRole, self.pushButton_2)
+        self.pushButton_3 = QtWidgets.QPushButton(Form)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setObjectName("cancel")
+        self.formLayout.setWidget(17, QtWidgets.QFormLayout.FieldRole, self.pushButton_3)
+        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(16, QtWidgets.QFormLayout.FieldRole, spacerItem6)
+        self.verticalLayout.addLayout(self.formLayout)
+      
+        self.retranslateUi(Form)
+        
+        self.pushButton_3.clicked.connect(Form.close)
+        self.pushButton.clicked.connect(self.addBoi)
+        self.pushButton_2.clicked.connect(self.clear)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+        
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.label.setText(_translate("Form", "Add"))
+        self.label_2.setText(_translate("Form", "Name"))
+        self.label_3.setText(_translate("Form", "Registration Number"))
+        self.label_4.setText(_translate("Form", "Phone Number"))
+        self.label_5.setText(_translate("Form", "E-Mail ID"))
+        self.pushButton.setText(_translate("Form", "Add"))
+        self.pushButton_2.setText(_translate("Form", "Clear"))
+        self.pushButton_3.setText(_translate("Form", "Cancel"))
+        
+    def addBoi(self):
+      import db
+      a=[]
+      a.append(self.le_name.text())
+      a.append(self.le_reg.text())
+      a.append(self.le_pno.text())
+      a.append(self.le_mail.text())
+      db.addStudent(a)
+      self.pushButton.setText("Successfully Added")      
+    def clear(self):
+      self.le_mail.clear()
+      self.le_name.clear()
+      self.le_pno.clear()
+      self.le_reg.clear()
+      self.pushButton.setText("Add")
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
+
