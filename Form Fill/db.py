@@ -10,8 +10,8 @@ import mysql.connector
 def addStudent(a):
   mydb = mysql.connector.connect(
     host="localhost",
-    user="root",
-    passwd="toor",
+    user="username",
+    passwd="password",
     database="students"
   )
   
